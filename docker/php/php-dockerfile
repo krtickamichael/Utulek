@@ -1,0 +1,47 @@
+# Použijte oficiální PHP 8.3.11 image z Docker Hubu
+FROM php:8.3.11-apache
+
+ARG LOG_FILE_NAME
+
+# Instalujte rozšíření PDO a MySQL
+RUN docker-php-ext-install pdo pdo_mysql
+
+# Instalujte rozšíření GD
+RUN apt-get update && apt-get install -y \
+    libfreetype-dev \
+    libjpeg62-turbo-dev \
+    libpng-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install -j$(nproc) gd
+
+# Instalujte rozšíření Zip
+RUN apt-get update && apt-get install -y \
+    libzip-dev \
+    zip \
+    && docker-php-ext-configure zip \
+    && docker-php-ext-install zip
+
+# Instalujte FFmpeg
+RUN apt-get update && apt-get install -y ffmpeg
+
+# Nastavte pracovní adresář na /var/www/html
+WORKDIR /var/www/html
+
+# Překopírujte obsah aktuálního adresáře do kontejneru
+# COPY . /var/www/html
+
+RUN touch /var/log/${LOG_FILE_NAME} && \
+    chown www-data:www-data /var/log/${LOG_FILE_NAME} && \
+    chmod 777 /var/log/${LOG_FILE_NAME}
+
+# Aktualizujte povolení pro soubory a adresáře
+RUN chown -R www-data:www-data /var/www/html
+
+# Změna timezone na Europe/Prague
+RUN apt-get update && apt-get install -y tzdata
+ENV TZ=Europe/Prague
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# Povolte mod_rewrite pro Apache
+RUN a2enmod rewrite
+RUN a2enmod headers
