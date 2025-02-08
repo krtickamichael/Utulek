@@ -16,43 +16,38 @@ error_reporting(E_ALL);
 
 <body>
     <?php
-    include_once("navbar.php");
+    require("navbar.php");
+    include("database_conn.php");
     ?>
-    <div class="row">
-        <div class="col-2">
-        </div>
-        <div class="dog_content col-8">
+    <div class="body">
+        <div class="dog_content">
             <?php
-            require "database_conn.php";
             $result = Db::getInstance()->setTable("dog")->select(["*"])->results();
-
             if (!empty($result)) {
                 foreach ($result as $row) {
             ?>
-                    <div class="card col-3">
-                        <div class="container-sm">
-                            <img src="<?php echo htmlspecialchars($row->img_dog) ?>" class="img-fluid" alt="..." style="border-radius: 10px;">
-                            <div class=" card-body">
-                                <h3 class="card-title"><?php echo htmlspecialchars($row->name_dog) ?></h3>
-                                <p class="card-text">
-                                <h6><?php echo htmlspecialchars($row->breed_dog) ?></h6>
-                                </p>
-                                <a href="dog_details.php?id=<?php echo htmlspecialchars($row->id_dog) ?>" class="btn btn-primary">Detail</a>
 
-                            </div>
+                    <div class="card">
+                        <img src="<?php echo htmlspecialchars($row->img_dog) ?>" class="img-fluid" name="dog_img">
+                        <div class=" card-body">
+                            <h3 class="card-title">
+                                <?php echo htmlspecialchars($row->name_dog) ?>
+                            </h3>
+                            <p class="card-text">
+                            <h6>
+                                <?php echo htmlspecialchars($row->breed_dog) ?>
+                            </h6>
+                            </p>
+                            <a href="dog_details.php?id=<?php echo htmlspecialchars($row->id_dog) ?>" class="btn btn-primary detail_btn">Detail</a>
                         </div>
                     </div>
             <?php
                 }
             }
+            include("footer.php");
             ?>
         </div>
-        <div class="col-2">
-        </div>
     </div>
-    <?php
-    include("footer.php");
-    ?>
 </body>
 
 </html>

@@ -1,46 +1,53 @@
 .card {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 25px;
-  margin-right: 25px;
-  padding-top: 10px;
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 300px;
+  height: 550px;
 }
-.dog_content {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 img[name="dog_details_img"] {
   margin-right: 15px;
-  border-radius: 10px;
-  max-width: 30%;
   margin-top: 15px;
+  border-radius: 10px;
+  max-width: 20%;
   float: left;
 }
-.card-text[name="dog_details_text"] {
-  margin-top: 50px;
+
+.container[name="dog_details_text"] {
+  margin-top: 20px;
 }
+
 .container[name="dog_details_title"] {
   font-size: 40px;
   font-weight: bold;
   margin-top: 15px;
 }
-.container[name="login_form"] {
-  margin-top: 15px;
+
+img[name="dog_img"] {
+  border-radius: 15px;
+  width: auto;
+  padding: 10px 10px 10px 10px;
 }
 
-.container[name="register_form"] {
-  margin-top: 15px;
+.body {
+  max-width: 1550px;
+  margin: 0 auto;
 }
 
-.container[name="carousel"] {
-  margin: 0px 30px 50px 30px;
-  width: 900px;
+.dog_content {
+  display: flex;
+  flex-wrap: wrap;
 }
-div[name="nadpis_uvod"] {
-  text-align: center;
-  margin-top: 30px;
-  color: white;
-  background-color: rgb(43, 48, 53);
-  border-radius: 30px;
-  padding: 20px 20px 20px 20px;
+
+.detail_btn {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+
+.navbar {
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: bold;
 }
