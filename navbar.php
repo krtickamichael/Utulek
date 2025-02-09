@@ -14,25 +14,27 @@
 </head>
 
 <body>
-    <div class="body">
-        <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="home.php">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="dog.php">Dogs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="test.php">Test</a>
-                        </li>
-                    </ul>
+    <div class="navbar_background">
+        <div class="body">
+            <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top">
+                <div class=" container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="home.php">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="dog.php">Dogs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="test.php">Test</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="login_form.php" class="btn btn-primary">Login</a>
                 </div>
-                <a href="login_form.php" class="btn btn-primary">Login</a>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </div>
 </body>
 
