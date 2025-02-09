@@ -20,9 +20,11 @@ $dog = Db::getInstance()->setTable("dog")->select(["*"], ["id_dog" => $id_dog])-
 </head>
 
 <body>
+    <?php
+    require("navbar.php");
+    ?>
     <div class="body">
         <?php
-        require("navbar.php");
         if (!empty($dog)) {
             foreach ($dog as $row) {
                 $row->description_dog = htmlspecialchars($row->description_dog ?? '');
