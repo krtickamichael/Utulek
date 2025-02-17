@@ -78,15 +78,6 @@ require_once "includes/login_view.inc.php";
             ?>
         </div>
 
-        <div class="logout_form">
-            <h3>Logout</h3>
-            <form action="includes/logout.inc.php" method="post" class="row g-3 mt-1">
-                <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-3">Logout</button>
-                </div>
-            </form>
-        </div>
-
     </div>
 
     <?php include("footer.php"); ?>

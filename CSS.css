@@ -104,13 +104,13 @@ img[name="dog_img"] {
 }
 
 .button_field {
-  width: 300px; /* Šířka tlačítka */
-  height: 100px; /* Výška tlačítka */
-  background-color: rgb(83, 164, 147); /* Barva pozadí tlačítka */
+  width: 300px;
+  height: 100px;
+  background-color: rgb(83, 164, 147);
   color: white;
   text-align: center;
-  line-height: 100px; /* Vertikální zarovnání textu */
-  border-radius: 10px; /* Zaoblené rohy */
+  line-height: 100px;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
   font-size: 25px;
@@ -119,7 +119,7 @@ img[name="dog_img"] {
 }
 
 .button_field:hover {
-  background-color: rgb(249, 113, 117); /* Barva tlačítka při najetí myší */
+  background-color: rgb(249, 113, 117);
 }
 
 .middle_button_field {
@@ -127,5 +127,10 @@ img[name="dog_img"] {
 }
 
 .middle_button_field:hover {
-  background-color: rgb(83, 164, 147); /* Nová barva tlačítka při najetí myší */
+  background-color: rgb(83, 164, 147);
+}
+
+.container[name="edit_menu"] {
+  margin-top: 20px;
+  margin-left: 0px;
 }
