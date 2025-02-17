@@ -21,18 +21,32 @@ require_once "includes/login_view.inc.php";
     <?php include("navbar.php"); ?>
     <div class="body">
         <div class="login_form">
-            <h3>Login</h3>
-            <form action="includes/login.inc.php" method="post" class="row g-3 mt-1">
-                <div class="col-auto">
-                    <input type="text" class="form-control" name="username" id="username" placeholder="Username">
-                </div>
-                <div class="col-auto">
-                    <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Password">
-                </div>
-                <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-3">Login</button>
-                </div>
-            </form>
+
+            <h3>
+                <?php
+                output_username();
+                ?>
+            </h3>
+            <?php
+            if (!isset($_SESSION["user_id"])) { ?>
+
+                <h3>Login</h3>
+                <form action="includes/login.inc.php" method="post" class="row g-3 mt-1">
+                    <div class="col-auto">
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Username">
+                    </div>
+                    <div class="col-auto">
+                        <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Password">
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-3">Login</button>
+                    </div>
+                </form>
+
+            <?php } ?>
+
+
+
         </div>
 
         <div class="errors">
@@ -63,24 +77,15 @@ require_once "includes/login_view.inc.php";
             check_signup_errors();
             ?>
         </div>
-        <!-- 
-            <h3>Login</h3>
 
-            <form action="includes/login.inc.php" method="post">
-                <input type="text" name="username" placeholder="Username">
-                <input type="password" name="pwd" placeholder="Password">
-                <button>Login</button>
+        <div class="logout_form">
+            <h3>Logout</h3>
+            <form action="includes/logout.inc.php" method="post" class="row g-3 mt-1">
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3">Logout</button>
+                </div>
             </form>
-
-        <h3>Signup</h3>
-
-        <form action="includes/signup.inc.php" method="post">
-            <input type="text" name="username" placeholder="Username">
-            <input type="password" name="pwd" placeholder="Password">
-            <input type="text" name="email" placeholder="E-Mail">
-            <button>Signup</button>
-        </form> -->
-
+        </div>
 
     </div>
 
