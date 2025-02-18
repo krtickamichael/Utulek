@@ -130,7 +130,20 @@ img[name="dog_img"] {
   background-color: rgb(83, 164, 147);
 }
 
-.container[name="edit_menu"] {
-  margin-top: 20px;
-  margin-left: 0px;
+.card[name="edit_card"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  font-size: 100px;
+}
+
+.card[name="main_edit_card"] {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
 }

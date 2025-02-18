@@ -27,7 +27,7 @@
                         <?php if (isset($_SESSION["user_id"])) { ?>
                             <ul class="nav justify-content-end">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="test.php">Edit</a>
+                                    <a class="nav-link" href="edit.php">Edit</a>
                                 </li>
                             </ul>
                         <?php } ?>
