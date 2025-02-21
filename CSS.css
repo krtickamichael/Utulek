@@ -6,6 +6,12 @@
   height: 550px;
 }
 
+.card_delete_btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
 img[name="dog_details_img"] {
   margin-right: 15px;
   margin-top: 15px;
@@ -69,6 +75,20 @@ img[name="dog_img"] {
 .navbar_background {
   background-color: rgb(83, 164, 147);
 }
+
+.custom_btn {
+  background-color: rgb(239, 214, 191);
+  color: black;
+  font-size: large;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+.custom_btn:hover {
+  background-color: rgb(239, 214, 191);
+  color: black;
+}
+
 /* NAVIGAČNÍ BAR*/
 
 .login_form {
@@ -131,19 +151,32 @@ img[name="dog_img"] {
 }
 
 .card[name="edit_card"] {
-  display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 150px;
-  font-size: 100px;
+  width: 300px;
+  height: 550px;
+  font-size: 275px;
 }
 
-.card[name="main_edit_card"] {
-  width: auto;
-  height: auto;
-  display: flex;
-  justify-content: center;
+.footer {
+  margin-top: 20px;
+  height: 100px;
+  background-color: rgb(239, 214, 191);
+}
+
+.errors {
+  margin-top: 20px;
+  height: 100px;
+  background-color: white;
+}
+
+.card_delete_btn {
+  font-size: 30px;
+}
+
+.text_body {
+  font-size: 25px;
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
 }

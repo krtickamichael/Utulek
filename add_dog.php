@@ -30,6 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } catch (Exception $e) {
         echo 'Chyba: ' . $e->getMessage();
     }
-    header("location: ../edit.php");
+    header("location: ../dog.php");
     die();
 }
