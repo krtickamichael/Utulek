@@ -67,7 +67,7 @@ require_once "includes/config_session.inc.php";
     <!-- Modal -->
     <div class="body">
         <div class="dog_content">
-
+            asda
         </div>
     </div>
 
