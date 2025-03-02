@@ -1,3 +1,4 @@
+/* CARD */
 .card {
   margin-top: 15px;
   margin-left: 5px;
@@ -12,6 +13,32 @@
   right: 20px;
 }
 
+img[name="dog_img"] {
+  border-radius: 15px;
+  width: auto;
+  padding: 10px 10px 10px 10px;
+}
+
+.dog_content {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 500px;
+}
+
+.card[name="edit_card"] {
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 550px;
+  font-size: 275px;
+}
+
+.card_delete_btn {
+  font-size: 30px;
+}
+/* CARD */
+
+/* CARD DETAILS */
 img[name="dog_details_img"] {
   margin-right: 15px;
   margin-top: 15px;
@@ -25,38 +52,23 @@ img[name="dog_details_img"] {
   margin-top: 20px;
 }
 
-.container[name="dog_details_title"] {
-  font-size: 40px;
-  font-weight: bold;
-  margin-top: 15px;
-}
-
-img[name="dog_img"] {
-  border-radius: 15px;
-  width: auto;
-  padding: 10px 10px 10px 10px;
-}
-
-.body {
-  max-width: 1550px;
-  margin: 0 auto;
-}
-
-.body_background {
-  background-color: rgb(239, 214, 191) !important;
-}
-
-.dog_content {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 500px;
-}
-
 .detail_btn {
   position: absolute;
   bottom: 15px;
   left: 15px;
 }
+
+.container[name="dog_details_text"] label {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.dog-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* CARD DETAILS */
 
 /* NAVIGAČNÍ BAR*/
 .navbar {
@@ -90,8 +102,9 @@ img[name="dog_img"] {
   background-color: rgb(239, 214, 191);
   color: black;
 }
-
 /* NAVIGAČNÍ BAR*/
+
+/* LOGIN , SIGNUP, LOGOUT, ERRORS */
 
 .login_form {
   margin-top: 50px;
@@ -110,6 +123,9 @@ img[name="dog_img"] {
 
 .errors {
   margin-left: 30px;
+  margin-top: 20px;
+  height: 100px;
+  background-color: white;
 }
 
 .panel {
@@ -117,6 +133,9 @@ img[name="dog_img"] {
   background-color: rgb(239, 214, 191) !important;
 }
 
+/* LOGIN , SIGNUP, LOGOUT, ERRORS */
+
+/* PANEL HOME BUBBLE */
 .panel_layout {
   padding-top: 75px;
   padding-bottom: 75px;
@@ -151,33 +170,33 @@ img[name="dog_img"] {
 .middle_button_field:hover {
   background-color: rgb(83, 164, 147);
 }
+/* PANEL HOME BUBBLE */
 
-.card[name="edit_card"] {
-  justify-content: center;
-  align-items: center;
-  width: 300px;
-  height: 550px;
-  font-size: 275px;
-}
-
+/* FOOTER */
 .footer {
   margin-top: 20px;
   height: 100px;
   background-color: rgb(239, 214, 191);
 }
-
-.errors {
-  margin-top: 20px;
-  height: 100px;
-  background-color: white;
-}
-
-.card_delete_btn {
-  font-size: 30px;
-}
+/* FOOTER */
 
 .text_body {
   font-size: 25px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.body {
+  max-width: 1550px;
+  margin: 0 auto;
+}
+
+.body_background {
+  background-color: rgb(239, 214, 191) !important;
+}
+
+.home_carousel {
   text-align: center;
   display: flex;
   flex-wrap: wrap;

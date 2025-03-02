@@ -53,14 +53,14 @@ require_once "includes/config_session.inc.php";
             ?>
 
             <?php if (isset($_SESSION["user_id"])) { ?>
-
+                <!-- ADD CARD -->
                 <div class="card" name="edit_card">
                     <div class="card-body">
                         <a class="bi bi-plus-square" style="color: rgb(83, 164, 147);" data-bs-toggle="modal" data-bs-target="#add_dog"></a>
                     </div>
                 </div>
             <?php } ?>
-            <!-- Modal add -->
+            <!-- Modal ADD CARD -->
             <div class="modal fade" id="add_dog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -115,14 +115,14 @@ require_once "includes/config_session.inc.php";
                     </div>
                 </div>
             </div>
-            <!-- Modal add -->
-
         </div>
     </div>
     <?php
 
     include("footer.php");
     ?>
+
+
 </body>
 
 </html>
