@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]
     );
 
-    header("Location: dog_details.php?id=$id_dog");
+    header("Location: dog.php");
     die();
 }
 
@@ -55,15 +55,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!empty($dog)) {
             foreach ($dog as $row) {
                 $row->description_dog = htmlspecialchars($row->description_dog ?? ''); ?>
-                <div class="dog-container">
-                    <img src=" <?php echo htmlspecialchars($row->img_dog) ?>" class="card-img-top" name="dog_details_img">
+                <div class="card-container">
+                    <img src=" <?php echo htmlspecialchars($row->img_dog) ?>" class="card-img-top" name="card_details_img">
 
 
                     <?php if (isset($_SESSION["user_id"])) { ?>
 
                         <form method="POST" action="dog_details.php?id=<?php echo htmlspecialchars($row->id_dog) ?>" class="edit-form">
 
-                            <div class="container" name="dog_details_text">
+                            <div class="container" name="card_details_text">
 
                                 <table class="table table-borderless">
                                     <tbody>
@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </form>
                     <?php
                     } else { ?>
-                        <div class="container" name="dog_details_text">
+                        <div class="container" name="card_details_text">
                             <h1>
                                 <?php
                                 echo htmlspecialchars($row->name_dog);
@@ -144,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     <div class="body">
-        <div class="dog_content">
+        <div class="card_content">
 
         </div>
     </div>

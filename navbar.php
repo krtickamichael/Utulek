@@ -12,27 +12,28 @@
 
 <body>
     <div class="navbar_background">
-        <div class="body">
-            <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top">
-                <div class=" container-fluid">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="home.php">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="dog.php">Dogs</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <?php if (!isset($_SESSION["user_id"])) { ?>
-                        <a href="login_form.php" class="btn custom_btn" role="button">Login</a>
-                    <?php } else { ?>
-                        <a href="includes/logout.inc.php" class="btn custom_btn">Logout</a>
-                    <?php } ?>
+        <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top">
+            <div class=" container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.php">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dog.php">Dogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cat.php">Cats</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
+                <?php if (!isset($_SESSION["user_id"])) { ?>
+                    <a href="login_form.php" class="btn custom_btn" role="button">Login</a>
+                <?php } else { ?>
+                    <a href="includes/logout.inc.php" class="btn custom_btn">Logout</a>
+                <?php } ?>
+            </div>
+        </nav>
     </div>
 </body>
 

@@ -9,24 +9,24 @@ require_once "database_conn.php";
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     try {
         $data = [
-            "name_dog" => $_POST["name_dog"],
-            "sex_dog" => $_POST["sex_dog"],
-            "age_dog" => $_POST["age_dog"],
-            "size_dog" => $_POST["size_dog"],
-            "breed_dog" => $_POST["breed_dog"],
-            "description_dog" => $_POST["description_dog"],
-            "img_dog" => "img/FNKD.png"
+            "name_cat" => $_POST["name_cat"],
+            "sex_cat" => $_POST["sex_cat"],
+            "age_cat" => $_POST["age_cat"],
+            "size_cat" => $_POST["size_cat"],
+            "breed_cat" => $_POST["breed_cat"],
+            "description_cat" => $_POST["description_cat"],
+            "img_cat" => "img/FNKD.png"
         ];
 
-        if (!empty($_FILES["dog_img"]["name"])) {
+        if (!empty($_FILES["cat_img"]["name"])) {
             // Zpracování nahrání souboru
-            $target_dir = "img/dog/";
-            $target_file = $target_dir . basename($_FILES["dog_img"]["name"]);
+            $target_dir = "img/cat/";
+            $target_file = $target_dir . basename($_FILES["cat_img"]["name"]);
             $uploadOk = 1;
             $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
             // Kontrola, zda je soubor skutečně obrázek
-            $check = getimagesize($_FILES["dog_img"]["tmp_name"]);
+            $check = getimagesize($_FILES["cat_img"]["tmp_name"]);
             if ($check !== false) {
                 $uploadOk = 1;
             } else {
@@ -36,11 +36,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             // Kontrola, zda soubor již existuje
             if (file_exists($target_file)) {
-                $data["img_dog"] = $target_file;
+                $data["img_cat"] = $target_file;
             } else {
 
                 // Kontrola velikosti souboru
-                if ($_FILES["dog_img"]["size"] > 5000000) {
+                if ($_FILES["cat_img"]["size"] > 5000000) {
                     $_SESSION["errors_dog"] = "Chyba v kontrole velikosti souboru";
                     $uploadOk = 0;
                 }
@@ -55,8 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 if ($uploadOk == 0) {
                     echo $_SESSION["errors_dog"];
                 } else {
-                    if (move_uploaded_file($_FILES["dog_img"]["tmp_name"], $target_file)) {
-                        $data["img_dog"] = $target_file;
+                    if (move_uploaded_file($_FILES["cat_img"]["tmp_name"], $target_file)) {
+                        $data["img_cat"] = $target_file;
                     } else {
                         $_SESSION["errors_dog"] = "Došlo k chybě při nahrávání souboru.";
                     }
@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         $db = Db::getInstance();
-        $db->setTable("dog");
+        $db->setTable("cat");
 
         if ($db->insert($data)) {
         } else {
@@ -74,6 +74,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } catch (Exception $e) {
         echo $_SESSION["errors_dog"];
     }
-    header("location: ../dog.php");
+    header("location: ../cat.php");
     die();
 }
