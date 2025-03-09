@@ -20,7 +20,7 @@ require_once "includes/config_session.inc.php";
     require("navbar.php");
     include("database_conn.php");
     ?>
-    <div class="body">
+    <div class="content">
         <div class="card_content">
             <?php
             $result = Db::getInstance()->setTable("cat")->select(["*"])->results();
@@ -29,7 +29,7 @@ require_once "includes/config_session.inc.php";
             ?>
 
                     <div class="card">
-                        <img src="<?php echo htmlspecialchars($row->img_cat) ?>" class="img-fluid" name="cat_img">
+                        <img src="<?php echo htmlspecialchars($row->img_cat) ?>" class="img-fluid" name="card_img">
                         <div class=" card-body">
                             <h3 class="card-title">
                                 <?php echo htmlspecialchars($row->name_cat) ?>

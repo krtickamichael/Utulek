@@ -50,14 +50,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php
     require("navbar.php");
     ?>
-    <div class="body">
+    <div class="content">
         <?php
         if (!empty($dog)) {
             foreach ($dog as $row) {
                 $row->description_dog = htmlspecialchars($row->description_dog ?? ''); ?>
                 <div class="card-container">
                     <img src=" <?php echo htmlspecialchars($row->img_dog) ?>" class="card-img-top" name="card_details_img">
-
 
                     <?php if (isset($_SESSION["user_id"])) { ?>
 

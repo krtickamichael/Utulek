@@ -93,7 +93,7 @@ img[name="card_details_img"] {
 .custom_btn {
   background-color: rgb(239, 214, 191) !important;
   color: black !important;
-  font-size: large !important;
+  font-size: x-large !important;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   font-weight: bold !important;
 }
@@ -199,7 +199,7 @@ img[name="card_details_img"] {
   flex-wrap: wrap;
 }
 
-.body {
+.content {
   max-width: 1550px;
   margin: 0 auto;
   min-height: 100vh;
@@ -214,4 +214,29 @@ img[name="card_details_img"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+}
+.logo-container a {
+  display: block;
+  width: 30%;
+  max-width: 510px; /* Maximální šířka loga */
+  overflow: hidden;
+  margin: auto;
+}
+.logo-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.menu {
+  text-align: center;
+  height: 110px;
 }

@@ -19,7 +19,7 @@ require_once "includes/login_view.inc.php";
 
 <body>
     <?php include("navbar.php"); ?>
-    <div class="body">
+    <div class="content">
         <div class="login_form">
 
             <h3>

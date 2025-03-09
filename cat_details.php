@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php
     require("navbar.php");
     ?>
-    <div class="body">
+    <div class="content">
         <?php
         if (!empty($cat)) {
             foreach ($cat as $row) {

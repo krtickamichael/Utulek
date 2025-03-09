@@ -20,7 +20,7 @@ require_once "includes/config_session.inc.php";
     require("navbar.php");
     include("database_conn.php");
     ?>
-    <div class="body">
+    <div class="content">
         <div class="card_content">
             <?php
             $result = Db::getInstance()->setTable("dog")->select(["*"])->results();
