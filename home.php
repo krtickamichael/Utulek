@@ -149,7 +149,55 @@ require_once "includes/config_session.inc.php";
             ?>
         </div>
 
-        <h1 style="text-align: center; margin-top:80px; margin-bottom:50px; color:rgb(249, 113, 117);">Jsme vděční našim partnerům</h1>
+        <h1 style="text-align: center; margin-top:150px; color:rgb(249, 113, 117);">Napsali o nás</h1>
+
+        <div class="container text-center">
+            <div class="row g-2">
+                <div class="col-6">
+                    <div class="p-3 d-flex flex-column align-items-center justify-content-center" style="height: 300px;">
+                        <div class="p-3 d-flex flex-column align-items-center justify-content-center" style="height: 200px;">
+                            <img src="img\Sponsors\cnn.png" alt="">
+                        </div>
+                        <div class="p-3 d-flex flex-column align-items-center justify-content-center">
+                            <a href="https://cnn.iprima.cz/co-majitele-psu-pokazili-napravuji-utulky-jak-se-pracuje-s-agresivni-smeckou-21514" class="btn" style="background-color:rgb(249, 113, 117);color:white;border-radius:40px; font-size:20px;height:50px; width:170px;"><strong>Přečíst článek</strong></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3 d-flex flex-column align-items-center justify-content-center" style="height: 300px;">
+                        <div class="p-3 d-flex flex-column align-items-center justify-content-center" style="height: 200px;">
+                            <img src="img\Sponsors\stream.png" alt="">
+                        </div>
+                        <div class="p-3 d-flex flex-column align-items-center justify-content-center">
+                            <a href="https://www.stream.cz/packa-pro-utulkace/miniazyl-voriskov-neni-jen-pro-vorisky-domov-tu-hleda-brit-i-snoopy-64144977" class="btn" style="background-color:rgb(249, 113, 117);color:white;border-radius:40px; font-size:20px;height:50px; width:210px;"><strong>Zhlédnout video</strong></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3 d-flex flex-column align-items-center justify-content-center" style="height: 300px;">
+                        <div class="p-3 d-flex flex-column align-items-center justify-content-center" style="height: 200px;">
+                            <img src="img\Sponsors\ivysilani.png" alt="">
+                        </div>
+                        <div class="p-3 d-flex flex-column align-items-center justify-content-center">
+                            <a href="https://www.ceskatelevize.cz/porady/1148499747-sama-doma/216562220600016/" class="btn" style="background-color:rgb(249, 113, 117);color:white;border-radius:40px; font-size:20px;height:50px; width:210px;"><strong>Zhlédnout záznam</strong></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3 d-flex flex-column align-items-center justify-content-center" style="height: 300px;">
+                        <div class="p-3 d-flex flex-column align-items-center justify-content-center" style="height: 200px;">
+                            <img src="img\Sponsors\laskavec.png" alt="">
+                        </div>
+                        <div class="p-3 d-flex flex-column align-items-center justify-content-center">
+                            <a href="https://www.facebook.com/nadacekj/videos/477797732423631/" class="btn" style="background-color:rgb(249, 113, 117);color:white;border-radius:40px; font-size:20px;height:50px; width:230px;"><strong>Zhlédnout nominaci</strong></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h1 style="text-align: center; margin-top:150px; margin-bottom:50px; color:rgb(249, 113, 117);">Jsme vděční našim partnerům</h1>
 
         <table class="table table-borderless">
             <div class="logo-container">

@@ -73,7 +73,7 @@ img[name="card_details_img"] {
 /* NAVIGAČNÍ BAR*/
 .navbar {
   background-color: rgb(83, 164, 147) !important;
-  font-size: 20px;
+  font-size: 10px;
   font-weight: bold;
 }
 
@@ -84,6 +84,8 @@ img[name="card_details_img"] {
 
 .navbar-nav .nav-link:hover {
   text-decoration: underline;
+  color: rgb(239, 214, 191);
+  transform: scale(1.2);
 }
 
 .navbar_background {

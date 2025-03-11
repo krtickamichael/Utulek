@@ -26,11 +26,11 @@
                 <nav class="navbar navbar-expand-lg bg-body-tertiary align-items-center">
                     <div class="collapse navbar-collapse mx-auto" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <a class="nav-link fs-2" style="margin-right: 30px; text-decoration: none;" href="home.php">Home</a>
-                            <a class="nav-link fs-2" style="margin-right: 30px; text-decoration: none;" href="dog.php">Dogs</a>
-                            <a class="nav-link fs-2" style="margin-right: 30px; text-decoration: none;" href="cat.php">Cats</a>
-                            <a class="nav-link fs-2" style="margin-right: 30px; text-decoration: none;" href="about.php">About us</a>
-                            <a class="nav-link fs-2" style="margin-right: 30px; text-decoration: none;" href="team.php">Team</a>
+                            <a class="nav-link fs-4" style="margin-right: 30px; text-decoration: none;" href="home.php">Domů</a>
+                            <a class="nav-link fs-4" style="margin-right: 30px; text-decoration: none;" href="dog.php">Psi</a>
+                            <a class="nav-link fs-4" style="margin-right: 30px; text-decoration: none;" href="cat.php">Kočky</a>
+                            <a class="nav-link fs-4" style="margin-right: 30px; text-decoration: none;" href="about.php">O nás</a>
+                            <a class="nav-link fs-4" style="margin-right: 30px; text-decoration: none;" href="team.php">Náš tým</a>
                         </div>
                     </div>
                 </nav>
